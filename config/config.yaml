@@ -1,0 +1,22 @@
+llm:
+  # mock | openai | anthropic
+  provider: mock
+  model: gpt-4o-mini
+  base_url: https://api.openai.com/v1
+  temperature: 0.2
+  timeout_seconds: 10
+  max_retries: 3
+  backoff_base_seconds: 0.5
+  backoff_max_seconds: 4
+
+cache:
+  ttl_seconds: 600
+  max_entries: 1000
+
+server:
+  host: 127.0.0.1
+  port: 8000
+
+logging:
+  level: INFO
+  file: logs/app.log
